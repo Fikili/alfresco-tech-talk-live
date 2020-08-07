@@ -1,7 +1,9 @@
 #!/bin/bash
 echo 'Preparation started';
 FILENAME="acl_report.txt";
-LOG="/opt/alfresco/current/alfresco.log";
+ALFRESCO_HOME="/opt/alfresco-527/current";
+cd $ALFRESCO_HOME;
+LOG="$ALFRESCO_HOME/alfresco.log";
 cat $LOG | grep "ACL Report" > $FILENAME;
 cat $FILENAME | grep " | 1" > 1_level.txt;
 cat $FILENAME | grep " | 2" > 2_level.txt;
@@ -24,5 +26,8 @@ cat 8_level.txt | cut -d '|' -f 4 | sed 's/^ //' | sed 's/ $//' | sort | uniq > 
 cat 9_level.txt | cut -d '|' -f 4 | sed 's/^ //' | sed 's/ $//' | sort | uniq > 9_noderef.txt;
 
 rm [1-9]_level.txt;
+
+# List and remove empty files
+find $ALFRESCO_HOME/[1-9]_noderef.txt -size 0 -print -delete;
 
 echo 'Preparation completed';
