@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>ACL Change SCript</shortname>
+    <description>Webscript for ACL change</description>
+    <url>/acl/acl-change-script?noderef={noderef}</url>
+    <authentication>admin</authentication>
+    <format default="json"></format>
+    <lifecycle>sample</lifecycle>
+</webscript>

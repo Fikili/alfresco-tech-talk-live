@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>ACL Change Report</shortname>
+    <description>Webscript for creating report of files</description>
+    <url>/acl/acl-change-report</url>
+    <authentication>admin</authentication>
+    <format default="json"></format>
+    <lifecycle>sample</lifecycle>
+</webscript>
