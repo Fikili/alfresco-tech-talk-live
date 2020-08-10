@@ -1,4 +1,4 @@
-var topFolder = "workspace://SpacesStore/e7e6bc29-d361-4ee2-b202-b6a9324a75ef";
+var topFolder = companyhome.childByNamePath("Import").getNodeRef();
 logger.info("ACL Report ||| START - " + topFolder);
 var level = 0;
 
