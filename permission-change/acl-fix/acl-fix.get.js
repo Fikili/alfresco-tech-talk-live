@@ -7,7 +7,6 @@ try {
 		node.setInheritsPermissions(false);
 		node.setPermission("Coordinator", "GROUP_ImportCoordinator");
 		node.setPermission("Consumer", "GROUP_ImportConsumer");
-		node.save();
 	}
 } catch (error) {
 	logger.error("FIX ACL error - noderef = " + args.noderef + " ||| error = " + error.message);
